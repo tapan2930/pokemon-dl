@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Recongizer</title>
+
+    <!-- Local css -->
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container py-5">
+
+        <!-- For demo purpose -->
+        <header class="text-white text-center">
+            <h1 class="display-4">Pokemon Recongizer</h1>
+            <p class="lead mb-0">Fastai, Transfer-Learning DL Model</p>
+            <!-- <p class="mb-5 font-weight-light">Snippet by
+                <a href="https://bootstrapious.com" class="text-white">
+                    <u>Bootstrapious</u>
+                </a>
+            </p> -->
+            <img src="../static/resources/img_rsrc.svg" alt="" width="150" class="mb-4 pad">
+        </header>
+
+
+        <div class="row py-4">
+            <div class="col-lg-6 mx-auto center">
+
+                <!-- Upload image input-->
+                <div class="input-group mb-3 rounded-pill bg-white shadow-sm">
+                    <form class="input-form" id="myForm" action="/upload" method="post">
+                        <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+                        <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+
+                </div>
+                <div class="image-area mt-4"><img id="imageResult" src="#" alt=""
+                        class="img-fluid rounded shadow-sm mx-auto d-block" width="224"></div>
+
+                <!-- <input id="submit-btn" class="mb-3 px-2 py-2" type="button" value="Upload" onclick="submit()"> -->
+                <button id="submit-btn" class="pad" type="submit">UPLOAD</button>
+                </form>
+
+
+
+
+
+                <!-- Result Area -->
+                <p class="font-italic text-white text-center pad">Prediction:
+                </p>
+                <div class="result-area mt-4"><p style="margin: 0; color: white; visibility: hidden;" id="result"><img src="../static/resources/loading.svg" alt="" style="width: 35px;background: white; border-radius: 51%; "> Photo Uploaded...Processing...</p></div>
+
+            </div>
+        </div>
+    </div>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- local js -->
+    <script src="../static/app.js"></script>
+</body>
+
+</html>

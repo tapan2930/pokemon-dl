@@ -39,7 +39,6 @@ const inpImg  = document.getElementById("upload")
 
 myForm.addEventListener("submit", e =>{
   e.preventDefault();
-  document.getElementById("result").innerHTML = '<p style="margin: 0; color: white; visibility: hidden;" id="result"><img src="/static/resources/loading.svg" alt="" style="width: 35px;background: white; border-radius: 51%; "> Photo Uploaded...Processing...</p>'
   document.getElementById("result").style.visibility = "visible"
   const endpoint = "/upload";
   formData = new FormData();
